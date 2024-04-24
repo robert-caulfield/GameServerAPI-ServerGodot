@@ -4,8 +4,8 @@ class_name GameServer
 # Server Info
 const DEFAULT_PORT = 6545 # What port is set to if none is defined in arguments
 const DEFAULT_SERVER_IP = "127.0.0.1" # What ip is set to if public ip is not fetched
-const MAX_CONNECTIONS = 8
-const DEFAULT_SERVER_NAME = "Server"
+const MAX_CONNECTIONS = 8 # Max players
+const DEFAULT_SERVER_NAME = "Server" # Name of the server if none is defined in arguments
 const PLAYER_AUTH_TIMEOUT = 10.0 # Time in seconds that a player has to authenticate
 const HEARTBEAT_INTERVAL = 30 # Time in seconds that a heartbeat is sent
 
