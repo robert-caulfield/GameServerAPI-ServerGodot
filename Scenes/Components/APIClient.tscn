@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://flbj5prroicu"]
+
+[ext_resource type="Script" path="res://Scripts/Components/APIClient.gd" id="1_v4vh6"]
+
+[node name="ApiClient" type="HTTPRequest"]
+timeout = 10.0
+script = ExtResource("1_v4vh6")

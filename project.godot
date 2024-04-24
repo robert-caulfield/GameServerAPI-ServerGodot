@@ -1,0 +1,25 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Api Test Server"
+run/main_scene="res://Scenes/LoginScreen.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*res://Scripts/Globals.gd"
+APIHelper="*res://api_helper.gd"
+
+[editor]
+
+run/main_run_args="--username=Admin --password=Admin123$ --port=6545 --server_name=\"Game Server\""

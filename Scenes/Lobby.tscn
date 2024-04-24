@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://drb6l8a6q2k52"]
+
+[ext_resource type="Script" path="res://Scripts/Server/Lobby.gd" id="1_spw2v"]
+[ext_resource type="PackedScene" uid="uid://flbj5prroicu" path="res://Scenes/Components/APIClient.tscn" id="2_lv05f"]
+[ext_resource type="Script" path="res://Scripts/Server/World.gd" id="3_j6gw4"]
+
+[node name="Lobby" type="Node"]
+script = ExtResource("1_spw2v")
+
+[node name="APIClient" parent="." instance=ExtResource("2_lv05f")]
+
+[node name="World" type="Node3D" parent="."]
+script = ExtResource("3_j6gw4")
+
+[node name="PlayerSpawner" type="MultiplayerSpawner" parent="World"]
+_spawnable_scenes = PackedStringArray("res://Scenes/Multiplayer/Instances/Player.tscn")
+spawn_path = NodePath("../Players")
+
+[node name="Players" type="Node3D" parent="World"]

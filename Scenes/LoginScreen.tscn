@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c175x6f0w1tdv"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_8bg8e"]
+[ext_resource type="Script" path="res://Scripts/SignIn.gd" id="1_hdt7a"]
+[ext_resource type="PackedScene" uid="uid://flbj5prroicu" path="res://Scenes/Components/APIClient.tscn" id="3_tbhsf"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_8bg8e")
+
+[node name="SignInNode" type="Node" parent="." node_paths=PackedStringArray("apiClient")]
+script = ExtResource("1_hdt7a")
+apiClient = NodePath("LogInAPIClient")
+
+[node name="LogInAPIClient" parent="SignInNode" instance=ExtResource("3_tbhsf")]
